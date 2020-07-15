@@ -5,7 +5,7 @@
   "author": "OUDJEHIH Anis <anis.oudjehih@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "env VUE_APP_GRAPHQL_ENDPOINT=http://localhost:60000/simple/v1/ckci7vrb700040182efelanjk webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
