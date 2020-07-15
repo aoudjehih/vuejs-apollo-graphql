@@ -26,3 +26,42 @@ export const ALL_USERS_QUERY = gql`query AllUsersQuery {
     email
   }
 }`
+
+export const USER_QUERY = gql`query UserQuery($id: Int!) {
+  user(id: $id) {
+    id
+    username
+    email
+    posts {
+      id
+    }
+  }
+}`
+
+export const ADD_POST_MUTATION = gql`mutation AddPostMutation($title: String!, $content: String!) {
+  addPost(
+    title: $title,
+    content: $content
+  ) {
+    id
+    slug
+    title
+    content
+    user {
+      id
+      username
+      email
+    }
+  }
+}`
+
+export const ALL_POSTS_QUERY = gql`query AllPostsQuery {
+  allPosts {
+    id
+    title
+    slug
+    user {
+      username
+    }
+  }
+}`
